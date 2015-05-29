@@ -3,11 +3,11 @@
 Fork of topic-modeling-tool with hardcoded --token-regex option. Works with French.
 
 Added on lines 540-543 of /src/main/java/cc/mallet/topics/gui/TopicModelingTool.java:
-
-```   //         String[] temp1 = {"--input",inputDir,"--output",collectionPath,"--keep-sequence"};
+``` 
+  //         String[] temp1 = {"--input",inputDir,"--output",collectionPath,"--keep-sequence"};
             String regex = "[\\p{L}\\p{P}]*\\p{L}";
             String[] temp1 = {"--input", inputDir, "--output", collectionPath, "--keep-sequence", "--token-regex", regex};
-```
+``` 
 
 # Use
 
