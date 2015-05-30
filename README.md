@@ -1,6 +1,6 @@
 # topic-modeling-tool-FR
 
-Fork of topic-modeling-tool with hardcoded --token-regex option. Works with French.
+Fork of topic-modeling-tool with hardcoded --token-regex option. Works with French. Now generates UTF-8 html pages.
 
 Added on lines 540-543 of /src/main/java/cc/mallet/topics/gui/TopicModelingTool.java:
 ``` 
@@ -16,3 +16,7 @@ Compile with maven or use the attached .jar file.
 # Original work by
 
 https://code.google.com/p/topic-modeling-tool and of course MALLET
+
+# Thanks
+
+Genchou von H for his technical insights
