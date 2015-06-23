@@ -33,8 +33,8 @@ public class TopicModelingTool {
 
 	  static private final String newline = "\n";
 		
-	  JFrame frame,frame2;	
-	  JButton openButton, trainButton,  advancedButton, stopChooseButton, outputDirButton;
+	  JFrame frame,frame2,frame3;	
+	  JButton openButton, trainButton,  advancedButton, stopChooseButton, outputDirButton, infoButton;
 	  JButton clearButton;
 	  JTextArea log;
 	  JFileChooser fc,outfc,stopChooser = new JFileChooser();
@@ -433,6 +433,17 @@ public class TopicModelingTool {
  	 */
  	public void actionPerformed(ActionEvent e) {
 		 frame2.setVisible(true);
+	 
+ 	}
+ }
+
+ public class infoButtonListener implements ActionListener{
+	 
+ 	/* (non-Javadoc)
+ 	 * @see java.awt.event.ActionListener#actionPerformed(java.awt.event.ActionEvent)
+ 	 */
+ 	public void actionPerformed(ActionEvent e) {
+		 frame3.setVisible(true);
 	 
  	}
  }
@@ -909,6 +920,50 @@ public class TopicModelingTool {
 	    frame2.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 	    //frame2.setVisible(true);		 
 }
+
+
+/**
+New panel for information
+**/
+
+public void buildAdvPanel2()
+  {
+	//create new advanced options window
+	    frame3 = new JFrame("Info");
+	    //frame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	    advPanel = new JPanel(new BorderLayout());
+	    
+	    		    
+	    Box advBox = new Box(BoxLayout.Y_AXIS);
+        
+        
+
+	    advPanel.add(advBox,BorderLayout.CENTER);
+	    
+
+	    JButton okButton = new JButton("Close");
+	    okButton.addActionListener(new ActionListener(){
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				frame3.setVisible(false);		
+			}
+	    });
+        
+         advBox.add(new JLabel("<html>Fork of topic-modeling-tool with hardcoded --token-regex option. Works with French. Now generates UTF-8 html pages. <br><br>  Warm thanks to Genchou von H and Stéphane Devaux for their technical insights! <br><br> Original work by http://code.google.com/p/topic-modeling-tool and MALLET (mallet.cs.umass.edu) <br><br> Modified to accept diacritics and accents by Simon Hengchen (shengche@ulb.ac.be - http://homepages.ulb.ac.be/~shengche/) <br><br> Simon Hengchen is a PhD Candidate at the Université libre de Bruxelles and funded by a Belgian Science Policy (BELSPO) project, TIC-Belgium (www.tic.ugent.be).</html>",JLabel.CENTER));        
+    //    advBox.add(myLabel,JLabel.CENTER);	    
+        advBox.add(okButton);
+	   // btmPanel.setBorder(BorderFactory.createEmptyBorder(20,0,0,0));
+	   // advPanel.add(btmPanel,BorderLayout.SOUTH);
+	    advBox.setBorder(BorderFactory.createEmptyBorder(5,5,5,5));
+	    frame3.getContentPane().add(advBox);
+	    frame3.setLocation(550,100);
+	    frame3.setSize(450,300);
+	    frame3.pack();
+	    frame3.setResizable(false);
+	    frame3.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+	    //frame2.setVisible(true);		 
+}
+  
   
   
   
@@ -927,6 +982,7 @@ public class TopicModelingTool {
 		    setDefaultOptions();
 		    initAdvControls();
 		    buildAdvPanel();
+            buildAdvPanel2();
 
 		    fc = new JFileChooser();		   
 		    fc.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES);
@@ -957,6 +1013,9 @@ public class TopicModelingTool {
 		    p1.add(inputDirTfield);
 		    p1.add(openButton);
 //		    p1.add(helpLabel);
+
+            infoButton = new JButton("info");
+		    infoButton.addActionListener(new infoButtonListener());
 		    	    
 		    outputDirButton = new JButton("Select Output Dir",
 		    		createImageIcon("/images/Open16.gif"));
@@ -980,6 +1039,7 @@ public class TopicModelingTool {
 		    
 		    JPanel p4 = new JPanel();
 		    p4.add(trainButton);
+            p4.add(infoButton);
 		    
 		    Box buttonBox = new Box(BoxLayout.Y_AXIS); 
 		    buttonBox.add(p1);

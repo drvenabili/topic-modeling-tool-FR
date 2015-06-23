@@ -20,13 +20,15 @@ sudo mvn clean install
 
 # Thanks
 
-Genchou von H for his technical insights
+Genchou von H and Stéphane Devaux for their technical insights.
 
-# Acknowledgments
+# Acknowledgements
 
 Original work by https://code.google.com/p/topic-modeling-tool/ and MALLET (http://mallet.cs.umass.edu)
 
 Modified to accept diacritics and accents (--token-regex "[\\p{L}\\p{P}]*\\p{L}") by Simon Hengchen (shengche@ulb.ac.be - http://homepages.ulb.ac.be/~shengche/)
+
 Available at https://github.com/ulbstic/topic-modeling-tool-FR
+
 
 Simon Hengchen is a PhD Candidate at the Université libre de Bruxelles and funded by a Belgian Science Policy (BELSPO) project, TIC-Belgium (http://www.tic.ugent.be).
