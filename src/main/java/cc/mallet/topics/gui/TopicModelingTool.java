@@ -14,8 +14,14 @@ import javax.swing.*;
 import javax.swing.filechooser.FileFilter;
 
 import java.util.*;
-
 /**
+Original work by https://code.google.com/p/topic-modeling-tool/
+Modified to accept diacritics and accents (--token-regex "[\\p{L}\\p{P}]*\\p{L}") by Simon Hengchen (shengche@ulb.ac.be - http://homepages.ulb.ac.be/~shengche/)
+Available at https://github.com/ulbstic/topic-modeling-tool-FR
+
+Simon Hengchen is a PhD Candidate at the Université libre de Bruxelles and funded by a Belgian Science Policy (BELSPO) project, TIC-Belgium (http://www.tic.ugent.be).
+
+
  * The Class TopicModelingGUI.
  */
 public class TopicModelingTool {
@@ -821,7 +827,7 @@ public class TopicModelingTool {
   public void buildAdvPanel()
   {
 	//create new advanced options window
-	    frame2 = new JFrame("TopicModelingTool");
+	    frame2 = new JFrame("TopicModelingTool, now with accents and diacritics");
 	    //frame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	    advPanel = new JPanel(new BorderLayout());
 	    
@@ -963,6 +969,7 @@ public class TopicModelingTool {
 		    JPanel p2 = new JPanel(); 
 		    p2.add(outputDirTfield);
 		    p2.add(outputDirButton);
+                                           
 		    
 		    	    
 		    JPanel p3 = new JPanel(); 
@@ -997,7 +1004,7 @@ public class TopicModelingTool {
 		    //JFrame.setDefaultLookAndFeelDecorated(true);
 		    //JDialog.setDefaultLookAndFeelDecorated(true);
 		
-		    frame = new JFrame("TopicModelingTool");
+		    frame = new JFrame("TopicModelingTool, now with accents and diacritics");
 		    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		    frame.addFocusListener(new FrameFocusListener());
 		
