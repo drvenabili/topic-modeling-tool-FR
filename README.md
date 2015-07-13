@@ -33,3 +33,4 @@ Available at https://github.com/ulbstic/topic-modeling-tool-FR
 
 
 Simon Hengchen is a PhD Candidate at the Université libre de Bruxelles and funded by a Belgian Science Policy (BELSPO) project, TIC-Belgium (http://www.tic.ugent.be).
+Marijn Koolen is an assistant professor of Digital Humanities at the Institute of Logic, Language and Computation, University of Amsterdam.
