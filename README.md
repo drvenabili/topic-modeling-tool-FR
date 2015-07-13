@@ -1,11 +1,12 @@
 # topic-modeling-tool-FR
 
-Fork of topic-modeling-tool with hardcoded --token-regex option. Works with French. Now generates UTF-8 html pages.
+Fork of topic-modeling-tool --token-regex option. Now generates UTF-8 html pages.
 
-Added on lines 540-543 of /src/main/java/cc/mallet/topics/gui/TopicModelingTool.java:
+Added a regex field allowing to specify a custom --token-regex.
 ``` 
   //         String[] temp1 = {"--input",inputDir,"--output",collectionPath,"--keep-sequence"};
-            String regex = "[\\p{L}\\p{P}]*\\p{L}";
+  //         String regex = "[\\p{L}\\p{P}]*\\p{L}";
+            String regex = regexTfield.getText();
             String[] temp1 = {"--input", inputDir, "--output", collectionPath, "--keep-sequence", "--token-regex", regex};
 ``` 
 
@@ -26,7 +27,7 @@ Genchou von H and Stéphane Devaux for their technical insights.
 
 Original work by https://code.google.com/p/topic-modeling-tool/ and MALLET (http://mallet.cs.umass.edu)
 
-Modified to accept diacritics and accents (--token-regex "[\\p{L}\\p{P}]*\\p{L}") by Simon Hengchen (shengche@ulb.ac.be - http://homepages.ulb.ac.be/~shengche/)
+Modified by Simon Hengchen (shengche@ulb.ac.be - http://homepages.ulb.ac.be/~shengche/) and Marijn Koolen (marijn.koolen@uva.nl - http://humanities.uva.nl/~mkoolen1)
 
 Available at https://github.com/ulbstic/topic-modeling-tool-FR
 
