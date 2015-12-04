@@ -1,4 +1,5 @@
 # topic-modeling-tool-FR
+[![DOI](https://zenodo.org/badge/18324/ulbstic/topic-modeling-tool-FR.svg)](https://zenodo.org/badge/latestdoi/18324/ulbstic/topic-modeling-tool-FR)
 
 Fork of topic-modeling-tool --token-regex option. Now generates UTF-8 html pages.
 
